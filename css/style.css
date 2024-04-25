@@ -39,6 +39,12 @@
 
 
 /* CUSTOM PROPS */
+:root {
+  --dark-purple:#301534;
+  --pink:#ad28eb;
+  --light-pink:#f8eeff;
+  --pale-purple:#8b6990;
+}
 
 
 /* GLOBAL */
