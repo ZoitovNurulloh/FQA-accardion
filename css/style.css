@@ -64,16 +64,14 @@ html {
 
 body {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items:center;
   height: 100%;
   background-color: var(--light-pink);
   color: var(--pale-purple);
   font-family: "Work Sans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-image: url(../img/background-pattern-desktop.svg);
-  background-repeat: no-repeat;
 }
 
 img {
@@ -114,6 +112,24 @@ input:-webkit-autofill:focus {
 } */
 
 
+/* IMG-BG */
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 320px;
+  z-index: -10;
+  background-color: var(--dark-purple);
+}
+
+.bg__img {
+  display: block;
+}
+
+
+/* FQA */
 .fqa {
   width: 100%;
   max-width: 600px;
@@ -145,6 +161,11 @@ input:-webkit-autofill:focus {
 
 
 /* FQA ACCORDION LIST */
+.fqa-accordion__inner--active .fqa-accordion__description {
+  display: block;
+  height: 96px;
+  padding-top: 24px;
+}
 
 .fqa-accordion__inner {
   padding-top: 28px;
@@ -160,13 +181,14 @@ input:-webkit-autofill:focus {
   padding-bottom: 0;
 }
 
-.fqa-accordion__btn-active + .fqa-accordion__description {
-  display: block;
-  padding-top: 24px;
+.fqa-accordion__btn-img-inner {
+  display: flex;
+  justify-content: center;
 }
 
 .fqa-accordion__btn {
   position: relative;
+  min-width: 225px;
   width: 100%;
   font-weight: 600;
   font-size: 18px;
@@ -175,29 +197,14 @@ input:-webkit-autofill:focus {
   text-align: left;
   color: var(--dark-purple);
   cursor: pointer;
+  margin-right: 24px;
 }
 
-
-.fqa-accordion__btn::after {
-  position: absolute;
+.fqa-accordion__img {
   display: block;
-  top: 0;
-  right: 0;
-  width: 24.38px;
-  height:24.38px;
-  content: " ";
-  background-image: url(../img/icon-plus.svg) ;
-  background-repeat:no-repeat;
-  background-position: center center ;
-}
-
-.fqa-accordion__btn-active::after {
-  top: 0;
-  right: 0;
-  width: 24.38px;
-  height:24.38px;
-  content: " ";
-  background-image: url(../img/icon-minus.svg) ;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
 }
 
 .fqa-accordion__btn:hover {
@@ -219,4 +226,19 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
+}
+
+@media only screen and (max-width:650px) {
+  .fqa {
+    padding: 24px;
+  }
+
+  .fqa-header {
+    margin-bottom: 24px;
+  }
+
+  .fqa-accordion__inner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
