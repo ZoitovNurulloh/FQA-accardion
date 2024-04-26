@@ -116,7 +116,7 @@ input:-webkit-autofill:focus {
 
 .fqa {
   width: 100%;
-  max-width: 520px;
+  max-width: 600px;
   padding: 40px;
   background-color: #fff;
   border-radius: 16px;
@@ -126,6 +126,7 @@ input:-webkit-autofill:focus {
 .fqa-header {
   display: flex;
   align-items: center;
+  margin-bottom: 32px;
 }
 
 .fqa-header__img {
@@ -135,9 +136,76 @@ input:-webkit-autofill:focus {
 }
 
 .fqa-header__heading {
+  flex-grow: 1;
+  margin: 0;
   font-size: 56px;
   line-height: 66px;
   color:var(--dark-purple);
+}
+
+
+/* FQA ACCORDION LIST */
+
+.fqa-accordion__inner {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  border-top: 1px solid var(--light-pink)
+}
+
+.fqa-accordion__inner:first-child {
+  padding-top: 0;
+}
+
+.fqa-accordion__inner:last-child {
+  padding-bottom: 0;
+}
+
+.fqa-accordion__btn-active + .fqa-accordion__description {
+  display: block;
+  padding-top: 24px;
+}
+
+.fqa-accordion__btn {
+  position: relative;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #fff;
+  text-align: left;
+  color: var(--dark-purple);
+  cursor: pointer;
+}
+
+
+.fqa-accordion__btn::after {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 24.38px;
+  height:24.38px;
+  content: " ";
+  background-image: url(../img/icon-plus.svg) ;
+  background-repeat:no-repeat;
+  background-position: center center ;
+}
+
+.fqa-accordion__btn-active::after {
+  top: 0;
+  right: 0;
+  width: 24.38px;
+  height:24.38px;
+  content: " ";
+  background-image: url(../img/icon-minus.svg) ;
+}
+
+.fqa-accordion__btn:hover {
+  color: var(--pink)
+}
+
+.fqa-accordion__description {
+  display: none;
 }
 
 
