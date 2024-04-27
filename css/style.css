@@ -163,7 +163,6 @@ input:-webkit-autofill:focus {
 /* FQA ACCORDION LIST */
 .fqa-accordion__inner--active .fqa-accordion__description {
   display: block;
-  height: 96px;
   padding-top: 24px;
 }
 
@@ -175,6 +174,7 @@ input:-webkit-autofill:focus {
 
 .fqa-accordion__inner:first-child {
   padding-top: 0;
+  border-top: 0;
 }
 
 .fqa-accordion__inner:last-child {
@@ -230,6 +230,8 @@ only screen and (                min-resolution: 2dppx) {
 
 @media only screen and (max-width:650px) {
   .fqa {
+    width: 100%;
+    max-width: 500px;
     padding: 24px;
   }
 
@@ -237,8 +239,37 @@ only screen and (                min-resolution: 2dppx) {
     margin-bottom: 24px;
   }
 
+  .fqa-header__heading {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
   .fqa-accordion__inner {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+
+  .fqa-accordion__inner--active .fqa-accordion__description {
+    display: block;
+    padding-top: 24px;
+  }
+}
+
+@media only screen and (max-width:550px) {
+  .fqa {
+      width: 100%;
+      max-width: 400px;
+  }
+
+  .fqa-accordion__btn {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+@media only screen and (max-width:450px) {
+  .fqa {
+      width: 100%;
+      max-width: 327px;
   }
 }
